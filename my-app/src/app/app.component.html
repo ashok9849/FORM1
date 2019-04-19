@@ -1,0 +1,137 @@
+<!-- <form [formGroup]="service.form" class="normal-form" (ngSubmit)="onSubmit()">
+    <mat-grid-list cols="" rowHeight="300px">
+        <mat-grid-tile>
+            <div class="controles-container">
+                <input type="hidden" formControlName="$key">
+                 
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</form> -->
+
+
+
+<div class = "header">
+  <form [formGroup]="service.form" class="normal-form" (ngSubmit)="onSubmit()">
+  <mat-grid-list cols="3" rowHeight="100px">
+    <mat-grid-tile>
+      <mat-form-field appearance="outline"  class="f1">
+        <mat-label >Vender</mat-label>
+            <select formControlName="venderName" matNativeControl required>
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="mercedes">Mercedes</option>
+              <option value="audi">Audi</option>
+              <mat-error>This field is mandatory.</mat-error>
+            </select>
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field appearance="outline"  class="f1">
+        <mat-label>Server</mat-label>
+        <select formControlName="serverName" matNativeControl required>
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field appearance="outline" class="f1">
+        <mat-label>Company</mat-label>
+        <select formControlName="companyName" matNativeControl required>
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
+      </mat-form-field>
+    </mat-grid-tile>
+
+  </mat-grid-list>
+
+  <mat-grid-list cols="3" rowHeight="100px">
+    <mat-grid-tile>
+      <mat-form-field appearance="outline" class="f1">
+        <mat-label>Document No.</mat-label>
+        <input formControlName="documentNo" matInput placeholder="TextHere..">
+        <mat-error>This field is mandatory.</mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field appearance="outline" class="f1">
+        <mat-label>Date of donation</mat-label>
+        <input formControlName="dateOfDonetion" matInput placeholder="TextHere..">
+
+        <!-- <input formControlName="hireDate" matInput [matDatepicker]="picker" placeholder="Hire Date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>   -->
+
+
+        <mat-error>This field is mandatory.</mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field appearance="outline" class="f1">
+        <mat-label>Receipt</mat-label>
+        <input formControlName="receiptNumber" matInput placeholder="TextHere..">
+        <mat-error>This field is mandatory.</mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+    
+  </mat-grid-list>
+
+  <mat-grid-list cols="3" rowHeight="100px">
+    <mat-grid-tile>
+      <mat-form-field appearance="outline" class="f1">
+        <mat-label>Amount Contributed</mat-label>
+        <input formControlName="AmountContribute" matInput placeholder="TextHere..">
+        <mat-error>This field is mandatory.</mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field appearance="outline" class="f1">
+        <mat-label>Remark</mat-label>
+        <input formControlName="catagory" matInput placeholder="Placeholder">
+        <mat-error>This field is mandatory.</mat-error>
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <mat-form-field appearance="outline" class="f1">
+        <mat-label>Catagory</mat-label>
+        <select  formControlName="remark"  matNativeControl required>
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
+      </mat-form-field>
+    </mat-grid-tile>
+    
+  </mat-grid-list>
+
+  <mat-grid-list cols="3" rowHeight="100px">
+    <mat-grid-tile>
+      <mat-form-field appearance="outline"  class="f1">
+        <mat-label>Server</mat-label>
+        <select  formControlName="rate"  matNativeControl required>
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="audi">Audi</option>
+        </select>
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile></mat-grid-tile>
+    <mat-grid-tile>
+        <div class="button-row">
+            <button mat-raised-button color="primary" type="submit">Submit</button>
+            <!-- <button mat-raised-button color="primary" type="submit" [disabled]="service.form.invalid">Submit</button> -->
+            <button mat-raised-button color="warn" (click)="onClear()">Clear</button>
+        </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+</form>
+</div>

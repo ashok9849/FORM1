@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.header{
+    margin:20px;
+    border:1px solid black;
+    padding:20px;
+}
+.f1{
+    width:300px;
+}
+.valu{
+    width:100px;
+}
+.button-row button{
+    margin-left:20px;   
+}
